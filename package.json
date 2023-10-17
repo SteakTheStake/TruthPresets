@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "angular": "^1.8.3",
     "apache": "^0.1.0",
     "leaflet": "^1.9.4",
     "node": "^20.7.0",

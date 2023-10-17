@@ -7,27 +7,200 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <link rel="stylesheet" href="/pages/css/style.css"/>
+    <link rel="stylesheet" href="/pages/css/phone.less"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
-<!-- Clouds -->
-<div class="z-0 tech-slideshow">
-        <img src="/content/img/cloud1.png" class="mover-1" alt="background">
-        <img src="/content/img/clouds-few.png" class="mover-2" alt="background">
-        <img src="/content/img/cloud2.png" class="mover-3" alt="background">
-        <img src="/content/img/clouds-few.png" class="mover-4" alt="background">
-        <img src="/content/img/cloud3.png" class="mover-5" alt="background">
-        <img src="/content/img/clouds-few.png" class="mover-6" alt="background">
-        <img src="/content/img/cloud1.png" class="mover-7" alt="background">
-        <img src="/content/img/clouds-few.png" class="mover-8" alt="background">
-        <img src="/content/img/cloud2.png" class="mover-9" alt="background">
-        <img src="/content/img/clouds-few.png" class="mover-10" alt="background">
-        <img src="/content/img/cloud3.png" class="mover-11" alt="background">
-        <img src="/content/img/clouds-few.png" class="mover-12" alt="background">
+<body ng-app="app">
+
+<div class="app-wrapper" ng-controller="ctrl">
+
+    <div class="showMainMenu hide">
+        <button type="button" class="actionBtn" ng-click="showPhone()">
+            <i class="material-icons">phone</i>
+            <span>Phone</span>
+        </button>
+        <button class="actionBtn">
+            <i class="material-icons">account_balance_wallet</i>
+            <span>Wallet</span>
+        </button>
+        <button class="actionBtn">
+            <i class="material-icons">folder_special</i>
+            <span>Inventory</span>
+        </button>
+        <button class="actionBtn">
+            <i class="material-icons">record_voice_over</i>
+            <span>Voice</span>
+        </button>
+        <button class="actionBtn">
+            <i class="material-icons">accessibility</i>
+            <span>Actions / Emotes</span>
+        </button>
+        <button class="actionBtn">
+            <i class="material-icons">close</i>
+            <span>Close Menu</span>
+        </button>
+    </div>
+
+    <!-- Phone Container -->
+    <div class="phone-wrapper z-10">
+        <!-- notch and cell icons -->
+        <div class="screen">
+            <div class="notch"></div>
+            <div class="phone-stats">
+                <i class="material-icons">network_cell</i>
+                <i class="material-icons">wifi</i>
+                <i class="material-icons">battery_full</i>
+            </div>
+            <!-- Main menu user lands on when toggling phone -->
+            <div class="main-menu app-show-hide" ng-hide="showMessages || showContacts || showPublicServices || showOtherServices">
+                <button class="menu-button" ng-click="showMessages = !showMessages">
+                    <i class="material-icons">message</i>
+                    <span>Messages</span>
+                </button>
+                <button class="menu-button" ng-click="showContacts = !showContacts">
+                    <i class="material-icons">contacts</i>
+                    <span>Contacts</span>
+                </button>
+                <button class="menu-button" ng-click="showPublicServices = !showPublicServices">
+                    <i class="material-icons">store</i>
+                    <span>Public Services</span>
+                </button>
+                <button class="menu-button" ng-click="showOtherServices = !showOtherServices">
+                    <i class="material-icons">local_play</i>
+                    <span>Other Services</span>
+                </button>
+                <button class="menu-button" ng-click="showAccountBalance = !showAccountBalance">
+                    <i class="material-icons">account_balance</i>
+                    <span>Account Balances</span>
+                </button>
+
+                <button class="menu-button" ng-click="hidePhone()">
+                    <i class="material-icons">close</i>
+                    <span>Close Phone</span>
+                </button>
+            </div>
+
+            <!-- My Messages -->
+            <div class="messages app-show-hide" ng-show="showMessages">
+                <h1>My Messages</h1>
+                <button class="menu-button" ng-click="showMessages = !showMessages">
+                    <i class="material-icons">keyboard_backspace</i>
+                    <span>Home</span>
+                </button>
+                <button class="menu-button" ng-click="showSendMessage = !showSendMessage">
+                    <i class="material-icons">note_add</i>
+                    <span>New Message</span>
+                </button>
+                <button class="menu-button">
+                    <i class="material-icons">person</i>
+                    <span>From: Tony</span>
+                </button>
+            </div>
+
+            <!-- My Contacts -->
+            <div class="contacts app-show-hide" ng-show="showContacts">
+                <h1>My Contacts</h1>
+                <button class="menu-button" ng-click="showContacts = !showContacts">
+                    <i class="material-icons">keyboard_backspace</i>
+                    <span>Home</span>
+                </button>
+                <button class="menu-button">
+                    <i class="material-icons">note_add</i>
+                    <span>New Contact</span>
+                </button>
+                <button class="menu-button" ng-click="showSendMessage = !showSendMessage">
+                    <i class="material-icons">person</i>
+                    <span>Sal Rosenberg</span>
+                </button>
+                <button class="menu-button">
+                    <i class="material-icons">person</i>
+                    <span>Black Bandit</span>
+                </button>
+                <button class="menu-button">
+                    <i class="material-icons">person</i>
+                    <span>Coop</span>
+                </button>
+            </div>
+
+            <!-- Public Services -->
+            <div class="public-services app-show-hide" ng-show="showPublicServices">
+                <h1>Public Services</h1>
+                <button class="menu-button" ng-click="showPublicServices = !showPublicServices">
+                    <i class="material-icons">keyboard_backspace</i>
+                    <span>Home</span>
+                </button>
+                <button class="menu-button">
+                    <i class="material-icons">gavel</i>
+                    <span>LSPD</span>
+                </button>
+                <button class="menu-button">
+                    <i class="material-icons">local_shipping</i>
+                    <span>EMS</span>
+                </button>
+                <button class="menu-button">
+                    <i class="material-icons">local_taxi</i>
+                    <span>Taxi Services</span>
+                </button>
+                <button class="menu-button">
+                    <i class="material-icons">build</i>
+                    <span>Mechanic Services</span>
+                </button>
+            </div>
+            
+            <!-- Other Services -->
+            <div class="other-services app-show-hide" ng-show="showOtherServices">
+                <h1>Other Services</h1>
+                <button class="menu-button" ng-click="showOtherServices = !showOtherServices">
+                    <i class="material-icons">keyboard_backspace</i>
+                    <span>Home</span>
+                </button>
+            </div>
+
+            <!-- Messages -->
+            <div class="account-balance app-show-hide" ng-show="showAccountBalance">
+                <h1>Account Balances</h1>
+                <button class="menu-button" ng-click="showAccountBalance = !showAccountBalance">
+                    <i class="material-icons">keyboard_backspace</i>
+                    <span>Back</span>
+                </button>
+                <ul>
+                    <li><strong>Clean:</strong> <span>$20,000</span></li>
+                    <li><strong>Dirty:</strong> <span>$2,000</span></li>
+                    <li><strong>Bank:</strong> <span>$120,000</span></li>
+                </ul>
+            </div>
+
+            <!-- Messages -->
+            <div class="send-message app-show-hide" ng-show="showSendMessage">
+                <h1>Message</h1>
+                <button class="menu-button" ng-click="showSendMessage = !showSendMessage">
+                    <i class="material-icons">keyboard_backspace</i>
+                    <span>Back to Messages</span>
+                </button>
+
+                <label>
+                    <input type="number" placeholder="Phone Number"/>
+                </label>
+                <label>
+                    <textarea placeholder="Your message goes here..."></textarea>
+                </label>
+                <button class="action-button" ng-click="showSendMessage = !showSendMessage">
+                    <span>Send</span>
+                </button>
+            </div>
+        </div>
+    </div>
 </div>
+
+
 <!-- Background -->
-<div class="z-10">
-<img src="/content/img/GTA-V.png" class="background" alt="background">
+<div class="z-0">
+    <img src="/content/img/GTA-V.png" class="background" alt="background">
 </div>
+
+
+
 </body>
 <script src="/pages/js/script.js"></script>
+<script src="/pages/js/phone.js"></script>
 </html>
