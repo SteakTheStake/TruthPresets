@@ -1,4 +1,4 @@
-DirectoryIndex /pages/index.html
+DirectoryIndex /pages/home.html
 
 <IfModule mod_deflate.c>
    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript
