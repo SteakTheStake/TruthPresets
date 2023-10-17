@@ -43,5 +43,4 @@ app.controller('ctrl', function($scope) {
         $('.showMainMenu').addClass('hide');
         $('.phone-wrapper').removeClass('hide');
     }
-
 });

@@ -7,192 +7,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <link rel="stylesheet" href="/pages/css/style.css"/>
-    <link  rel="stylesheet/less" type="text/css" href="/pages/css/phone.less"/>
+    <link  rel="stylesheet" type="text/css" href="/pages/css/main-phone.scss"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body ng-app="app">
-
-<div class="app-wrapper" ng-controller="ctrl">
-
-    <div class="showMainMenu hide">
-        <button type="button" class="actionBtn" ng-click="showPhone()">
-            <i class="material-icons">phone</i>
-            <span>Phone</span>
-        </button>
-        <button class="actionBtn">
-            <i class="material-icons">account_balance_wallet</i>
-            <span>Wallet</span>
-        </button>
-        <button class="actionBtn">
-            <i class="material-icons">folder_special</i>
-            <span>Inventory</span>
-        </button>
-        <button class="actionBtn">
-            <i class="material-icons">record_voice_over</i>
-            <span>Voice</span>
-        </button>
-        <button class="actionBtn">
-            <i class="material-icons">accessibility</i>
-            <span>Actions / Emotes</span>
-        </button>
-        <button class="actionBtn">
-            <i class="material-icons">close</i>
-            <span>Close Menu</span>
-        </button>
-    </div>
-
-    <!-- Phone Container -->
-    <div class="phone-wrapper z-10">
-        <!-- notch and cell icons -->
-        <div class="screen">
-            <div class="notch"></div>
-            <div class="phone-stats">
-                <i class="material-icons">network_cell</i>
-                <i class="material-icons">wifi</i>
-                <i class="material-icons">battery_full</i>
-            </div>
-            <!-- Main menu user lands on when toggling phone -->
-            <div class="main-menu app-show-hide" ng-hide="showMessages || showContacts || showPublicServices || showOtherServices">
-                <button class="menu-button" ng-click="showMessages = !showMessages">
-                    <i class="material-icons">message</i>
-                    <span>Messages</span>
-                </button>
-                <button class="menu-button" ng-click="showContacts = !showContacts">
-                    <i class="material-icons">contacts</i>
-                    <span>Contacts</span>
-                </button>
-                <button class="menu-button" ng-click="showPublicServices = !showPublicServices">
-                    <i class="material-icons">store</i>
-                    <span>Public Services</span>
-                </button>
-                <button class="menu-button" ng-click="showOtherServices = !showOtherServices">
-                    <i class="material-icons">local_play</i>
-                    <span>Other Services</span>
-                </button>
-                <button class="menu-button" ng-click="showAccountBalance = !showAccountBalance">
-                    <i class="material-icons">account_balance</i>
-                    <span>Account Balances</span>
-                </button>
-
-                <button class="menu-button" ng-click="hidePhone()">
-                    <i class="material-icons">close</i>
-                    <span>Close Phone</span>
-                </button>
-            </div>
-
-            <!-- My Messages -->
-            <div class="messages app-show-hide" ng-show="showMessages">
-                <h1>My Messages</h1>
-                <button class="menu-button" ng-click="showMessages = !showMessages">
-                    <i class="material-icons">keyboard_backspace</i>
-                    <span>Home</span>
-                </button>
-                <button class="menu-button" ng-click="showSendMessage = !showSendMessage">
-                    <i class="material-icons">note_add</i>
-                    <span>New Message</span>
-                </button>
-                <button class="menu-button">
-                    <i class="material-icons">person</i>
-                    <span>From: Tony</span>
-                </button>
-            </div>
-
-            <!-- My Contacts -->
-            <div class="contacts app-show-hide" ng-show="showContacts">
-                <h1>My Contacts</h1>
-                <button class="menu-button" ng-click="showContacts = !showContacts">
-                    <i class="material-icons">keyboard_backspace</i>
-                    <span>Home</span>
-                </button>
-                <button class="menu-button">
-                    <i class="material-icons">note_add</i>
-                    <span>New Contact</span>
-                </button>
-                <button class="menu-button" ng-click="showSendMessage = !showSendMessage">
-                    <i class="material-icons">person</i>
-                    <span>Sal Rosenberg</span>
-                </button>
-                <button class="menu-button">
-                    <i class="material-icons">person</i>
-                    <span>Black Bandit</span>
-                </button>
-                <button class="menu-button">
-                    <i class="material-icons">person</i>
-                    <span>Coop</span>
-                </button>
-            </div>
-
-            <!-- Public Services -->
-            <div class="public-services app-show-hide" ng-show="showPublicServices">
-                <h1>Public Services</h1>
-                <button class="menu-button" ng-click="showPublicServices = !showPublicServices">
-                    <i class="material-icons">keyboard_backspace</i>
-                    <span>Home</span>
-                </button>
-                <button class="menu-button">
-                    <i class="material-icons">gavel</i>
-                    <span>LSPD</span>
-                </button>
-                <button class="menu-button">
-                    <i class="material-icons">local_shipping</i>
-                    <span>EMS</span>
-                </button>
-                <button class="menu-button">
-                    <i class="material-icons">local_taxi</i>
-                    <span>Taxi Services</span>
-                </button>
-                <button class="menu-button">
-                    <i class="material-icons">build</i>
-                    <span>Mechanic Services</span>
-                </button>
-            </div>
-            
-            <!-- Other Services -->
-            <div class="other-services app-show-hide" ng-show="showOtherServices">
-                <h1>Other Services</h1>
-                <button class="menu-button" ng-click="showOtherServices = !showOtherServices">
-                    <i class="material-icons">keyboard_backspace</i>
-                    <span>Home</span>
-                </button>
-            </div>
-
-            <!-- Messages -->
-            <div class="account-balance app-show-hide" ng-show="showAccountBalance">
-                <h1>Account Balances</h1>
-                <button class="menu-button" ng-click="showAccountBalance = !showAccountBalance">
-                    <i class="material-icons">keyboard_backspace</i>
-                    <span>Back</span>
-                </button>
-                <ul>
-                    <li><strong>Clean:</strong> <span>$20,000</span></li>
-                    <li><strong>Dirty:</strong> <span>$2,000</span></li>
-                    <li><strong>Bank:</strong> <span>$120,000</span></li>
-                </ul>
-            </div>
-
-            <!-- Messages -->
-            <div class="send-message app-show-hide" ng-show="showSendMessage">
-                <h1>Message</h1>
-                <button class="menu-button" ng-click="showSendMessage = !showSendMessage">
-                    <i class="material-icons">keyboard_backspace</i>
-                    <span>Back to Messages</span>
-                </button>
-
-                <label>
-                    <input type="number" placeholder="Phone Number"/>
-                </label>
-                <label>
-                    <textarea placeholder="Your message goes here..."></textarea>
-                </label>
-                <button class="action-button" ng-click="showSendMessage = !showSendMessage">
-                    <span>Send</span>
-                </button>
+<body>
+<div class="main-phone">
+    <input id="deep-purple" name="theme" type="radio" checked="checked"/>
+    <input id="gold" name="theme" type="radio"/>
+    <input id="space-black" name="theme" type="radio"/>
+    <input id="silver" name="theme" type="radio"/>
+    <input id="random" name="theme" type="radio"/>
+    <input id="zoom" name="zoom" type="checkbox"/>
+    <div class="scene">
+        <div class="pallette">
+            <label class="swatch" tabIndex="0" for="deep-purple"></label>
+            <label class="swatch" tabIndex="0" for="gold"></label>
+            <label class="swatch" tabIndex="0" for="space-black"></label>
+            <label class="swatch" tabIndex="0" for="silver"></label>
+            <label class="swatch" tabIndex="0" for="random">
+                <div class="icon"></div>
+                <div class="tooltip">CMD + click to save</div>
+            </label>
+        </div>
+        <div class="zoom-con">
+            <label class="swatch" tabIndex="0" for="zoom"></label>
+        </div>
+        <div class="phone-con">
+            <div class="phone">
+                <div class="buttons">
+                    <div class="left">
+                        <div class="button"></div>
+                        <div class="button"></div>
+                        <div class="button"></div>
+                    </div>
+                    <div class="right">
+                        <div class="button"></div>
+                    </div>
+                </div>
+                <div class="camera"></div>
+                <div class="screen-container">
+                    <div class="bg">
+                        <div class="deep-purple">
+                            <div class="section">
+                                <div class="glow"></div>
+                            </div>
+                            <div class="section">
+                                <div class="glow"></div>
+                            </div>
+                        </div>
+                        <div class="gold">
+                            <div class="section">
+                                <div class="glow"></div>
+                            </div>
+                            <div class="section">
+                                <div class="glow"></div>
+                            </div>
+                        </div>
+                        <div class="space-black">
+                            <div class="section">
+                                <div class="glow"></div>
+                            </div>
+                            <div class="section">
+                                <div class="glow"></div>
+                            </div>
+                        </div>
+                        <div class="silver">
+                            <div class="section">
+                                <div class="glow"></div>
+                            </div>
+                            <div class="section">
+                                <div class="glow"></div>
+                            </div>
+                        </div>
+                        <div class="random canvas">
+                            <div class="shapes">
+                                <div class="shape"></div>
+                                <div class="shape"></div>
+                                <div class="shape"></div>
+                                <div class="shape"></div>
+                                <div class="shape"></div>
+                                <div class="shape"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notch-container" tabIndex="0">
+                        <div class="notch">
+                            <div class="content">
+                                <div class="left">
+                                    <div class="tile"></div>
+                                    <div class="text"></div>
+                                </div>
+                                <div class="right"></div>
+                                <div class="bar">
+                                    <div class="duration"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notch-blur"></div>
+                    <div class="screen">
+                        <div class="app">
+                            <div class="weather"></div>
+                        </div>
+                        <div class="app"></div>
+                        <div class="app"></div>
+                        <div class="app"></div>
+                        <div class="app"></div>
+                        <div class="app"></div>
+                        <div class="app"></div>
+                        <div class="app"></div>
+                        <div class="app"></div>
+                        <div class="app"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
-
 <!-- Background -->
 <div class="z-0">
     <img src="/content/img/GTA-V.png" class="background" alt="background">
@@ -203,5 +134,5 @@
 </body>
 <script src="/pages/js/script.js"></script>
 <script src="/pages/js/phone.js"></script>
-<script src="/node_modules/less/dist/less.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </html>
