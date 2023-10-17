@@ -2,10 +2,7 @@
 
 .main-phone {
   position: absolute;
-  display: grid;
-  padding: 50px;
-  margin: 100px;
-
+  z-index: 50;
 }
 
 :root {
