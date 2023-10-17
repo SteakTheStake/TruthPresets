@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Truth Presets | Home</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/content/img/favicon.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" href="/pages/css/style.css"/>
+</head>
+<body>
+    <div id="map">
+        <div>
+            <div class="cloud" id="cloud-base"></div>
+            <div class="cloud" id="cloud-back"></div>
+            <div class="cloud" id="cloud-mid"></div>
+            <div class="cloud" id="cloud-front"></div>
+        </div>
+    <svg width="0" height="0">
+        <!--Top Layer-->
+        <filter id="filter-base">
+            <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="5"
+                          seed="8517" />
+            <feDisplacementMap  in="SourceGraphic" scale="120" />
+        </filter>
+        <filter id="filter-back">
+            <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="3"
+                          seed="8517" />
+            <feDisplacementMap  in="SourceGraphic" scale="120" />
+        </filter>
+        <filter id="filter-mid">
+            <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="3"
+                          seed="8517"/>
+            <feDisplacementMap  in="SourceGraphic" scale="120" />
+        </filter>
+        <filter id="filter-front">
+            <feTurbulence type="fractalNoise" baseFrequency="0.009" numOctaves="4" seed="8517"/>
+            <feDisplacementMap  in="SourceGraphic" scale="50" />
+        </filter>
+    </svg>
+    </div>
+</body>
+<script src="/pages/js/script.js"></script>
+</html>

@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "apache": "^0.1.0",
+    "leaflet": "^1.9.4",
+    "node": "^20.7.0",
+    "three": "^0.157.0"
+  },
+  "devDependencies": {
+    "vite": "^4.4.11"
+  }
+}
