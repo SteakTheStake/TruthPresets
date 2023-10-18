@@ -3,6 +3,7 @@
 html {
     min-height: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .title {
@@ -14,6 +15,7 @@ body {
     width: 100%;
     height: 100%;
     font-weight: 400;
+    overflow: hidden;
 }
 
 .background {
@@ -27,8 +29,38 @@ body {
     z-index: -999;
 }
 
+.fog {
+    mix-blend-mode: screen;
+    animation-name: fadeFog;  /* You can chain multiple animations */
+    animation-duration: 5s;  /* Adjust as needed */
+    animation-timing-function: linear;  /* Or any other easing function */
+    opacity: 95%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes fadeFog {
+    0% {
+        opacity: 0;  /* Start fully transparent */
+    }
+    50% {
+        opacity: 1;  /* Midway, become fully opaque */
+    }
+    100% {
+        opacity: 0;  /* End fully transparent */
+    }
+}
+
 .z-0 {
     z-index: 0;
+    overflow: hidden;
 }
 
 .z-10 {
@@ -53,4 +85,66 @@ body {
 .separator-pin .pin:hover {
     transform: scale(90%);
     transform-origin: bottom;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.cloud {
+    position: absolute;
+    animation: fallThrough 5s linear infinite;
+    opacity: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes fallThrough {
+    0% {
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+/* You can adjust the starting position and animation duration for individual clouds */
+#cloud1 {
+    left: 10%;
+    animation-delay: 1s;
+}
+
+#cloud2 {
+    left: 50%;
+    animation-delay: 2s;
+}
+
+#cloud3 {
+    right: 50%;
+    animation-delay: 3s;
+}
+
+#cloud4 {
+    right: 25%;
+    animation-delay: 2s;
+}
+
+#cloud5 {
+    mix-blend-mode: screen;
+    min-width: 1000px;
+    animation-delay: 5s;
+}
+
+#cloud6 {
+    mix-blend-mode: screen;
+    min-width: 1000px;
+    animation-delay: 1s;
 }
