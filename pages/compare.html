@@ -3,16 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Truth Presets | Free Presets</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/content/img/favicon.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" href="/pages/css/circle.css">
+    <link rel="stylesheet" href="/pages/css/style.css">
 </head>
 <body>
+<header>
+    <nav>
+        <ul class="navigation-menu">
+            <li><a href="/pages/home.html"><img class="logo" src="/content/img/tp-logo.png" alt="logo"/></a></li>
+            <li class="extends"><a href="#">Presets</a>
+                <ul>
+                    <li><a href="https://patreon.com/TruthPresets?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=creatorshare_fan&utm_content=join_link" target="_blank">Download</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Screenshots</a></li>
+            <li><a href="/pages/compare.html">Compare Our Presets</a></li>
+            <li><a href="https://discord.gg/SYQNtWAzAx" target="_blank">Discord</a></li>
+        </ul>
+    </nav>
+</header>
+
 
 <div id="app-info">
 </div>
 <div id="current-weapon">
-    <h3>Current Weapon:</h3>
+    <h3>Current Preset:</h3>
     <div id="current-weapon-info">
-        <h1 id="current-weapon-name">SMG</h1>
+        <h1 id="current-weapon-name">Deep Hues</h1>
         <img id="current-weapon-image" src="https://vignette.wikia.nocookie.net/gtawiki/images/5/5e/SMG-GTAVPC-HUD.png/revision/latest/scale-to-width-down/185?cb=20150419121752">
     </div>
     <button id="weapon-selector-button">Change</button>
@@ -124,7 +145,7 @@
         <g onclick="changeCurrentWeaponWith(this)"
            onmouseover="mouseoverWeapon(this)"
            onmouseout="onmouseoutWeapon()"
-           data-weapon="SMG"
+           data-weapon="Deep Hues"
            data-image="https://vignette.wikia.nocookie.net/gtawiki/images/5/5e/SMG-GTAVPC-HUD.png/revision/latest/scale-to-width-down/185?cb=20150419121752"
            data-damage="70%"
            data-fire-rate="10%"
@@ -153,5 +174,5 @@
 </div>
 
 </body>
-<script src="js/script.js"></script>
+<script src="/pages/js/circle.js"></script>
 </html>

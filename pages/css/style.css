@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Rajdhani:300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 html {
     min-height: 100%;
@@ -16,6 +16,7 @@ body {
     height: 100%;
     font-weight: 400;
     overflow: hidden;
+    font-family: "Rajdhani", sans-serif;
 }
 
 .background {
@@ -32,9 +33,8 @@ body {
 .fog {
     mix-blend-mode: screen;
     animation-name: fadeFog;  /* You can chain multiple animations */
-    animation-duration: 5s;  /* Adjust as needed */
     animation-timing-function: linear;  /* Or any other easing function */
-    opacity: 95%;
+    opacity: 15%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -46,16 +46,26 @@ body {
     pointer-events: none;
 }
 
+#imageToScale {
+    transition: transform 0.3s ease; /* 0.3s is the duration of the transition; you can adjust it */
+}
+
 @keyframes fadeFog {
     0% {
-        opacity: 0;  /* Start fully transparent */
+        opacity: 95%;  /* Start fully transparent */
     }
     50% {
-        opacity: 1;  /* Midway, become fully opaque */
+        opacity: 75%;  /* Midway, become fully opaque */
     }
     100% {
         opacity: 0;  /* End fully transparent */
     }
+}
+
+.fadeOut {
+    animation-name: fadeCloud;
+    animation-duration: 2s;  /* Adjust duration as needed */
+    animation-fill-mode: forwards;  /* Ensures the end state (opacity: 0) of the animation is retained */
 }
 
 .z-0 {
@@ -68,17 +78,28 @@ body {
 }
 
 .separator-pin {
+    scale: 200%;
     position: absolute;
     top: 63%;
     left: 46%;
     transform: translate(-50%, -50%);
     opacity: 75%;
+    display: flex;
+}
+
+.separator-pin .btn {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    visibility: visible;
+    bottom: -10px;
+    border: rgba(0,0,0,0);
+    background-color: rgba(255,255,255,0);
 }
 
 .separator-pin .pin {
     transform-origin: bottom;
     position: absolute;
-    width: 75px;
     transition: transform 250ms;
 }
 
@@ -147,4 +168,82 @@ body {
     mix-blend-mode: screen;
     min-width: 1000px;
     animation-delay: 1s;
+}
+
+header {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 20px #0003;
+}
+header nav {
+    position: relative;
+}
+header nav .navigation-menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+header nav .navigation-menu li {
+    position: relative;
+}
+header nav .navigation-menu li a {
+    position: relative;
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    text-wrap: none;
+    font-size: 1.25em;
+}
+.logo{
+    width: 75px;
+    height: auto;
+}
+header nav .navigation-menu li.extends a::after {
+    content: ">";
+    display: inline-block;
+    transform: rotate(90deg);
+    margin-left: 0.5rem;
+    padding-bottom: 3px;
+    vertical-align: middle;
+    font-size: 10px;
+}
+header nav .navigation-menu li:not(.extends) a::after {
+    content: "";
+}
+header nav .navigation-menu li ul {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    list-style: none;
+    background-color: rgba(37, 46, 49, 0.75);
+    box-shadow: 0 0 20px #0003;
+}
+header nav .navigation-menu li ul li {
+    position: unset;
+}
+header nav .navigation-menu li ul li a::after {
+    transform: rotate(0deg) !important;
+}
+header nav .navigation-menu li ul li ul {
+    left: 100%;
+    top: 0;
+    min-height: 100%;
+}
+header nav .navigation-menu li:hover {
+    background-color: rgba(37, 46, 49, 0.75);
+}
+header nav .navigation-menu li:not(:hover) ul {
+    display: none;
 }

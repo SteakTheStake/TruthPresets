@@ -7,15 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <link rel="stylesheet" href="/pages/css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="/pages/css/main-phone.scss"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
+<header>
+    <nav>
+        <ul class="navigation-menu">
+            <li><a href="/pages/home.html"><img class="logo" src="/content/img/tp-logo.png" alt="logo"/></a></li>
+            <li class="extends"><a href="#">Presets</a>
+                <ul>
+                    <li><a href="https://patreon.com/TruthPresets?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=creatorshare_fan&utm_content=join_link" target="_blank">Download</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Screenshots</a></li>
+            <li><a href="/pages/compare.html">Compare Our Presets</a></li>
+            <li><a href="https://discord.gg/SYQNtWAzAx" target="_blank">Discord</a></li>
+        </ul>
+    </nav>
+</header>
 
 <!-- Foreground -->
 <div class="z-10">
-    <div class="separator-pin" id="hoverImage">
-        <img id="clickImage" class="pin" alt="pin" src="/content/img/pin.png"/>
+    <div class="separator-pin" id="hoverSound">
+        <div class="pin">
+            <button class="btn" id="clickSound"></button>
+            <i class="fa-solid fa-location-dot fa-2xl" style="color: #c73838;"></i>
+        </div>
     </div>
     <!-- Add more cloud images as needed -->
 </div>
@@ -26,10 +44,10 @@
     <img src="/content/img/cloud2.png" class="cloud" id="cloud2" alt="cloud">
     <img src="/content/img/cloud3.png" class="cloud" id="cloud3" alt="cloud">
     <img src="/content/img/cloud1.png" class="cloud" id="cloud4" alt="cloud">
-    <img src="/content/img/clouds-few.png" class="cloud" id="cloud5" alt="cloud">
-    <img src="/content/img/clouds-few.png" class="cloud" id="cloud6" alt="cloud">
-    <img src="/content/img/GTA-V-height.png" class="fog" alt="background">
-    <img src="/content/img/GTA-V.png" class="background" alt="background">
+        <div id="imageToScale">
+            <img src="/content/img/GTA-V-height.png" class="fog" alt="background">
+            <img src="/content/img/GTA-V.png" class="background" alt="background">
+        </div>
 </div>
 </body>
 <script src="/pages/js/script.js"></script>
