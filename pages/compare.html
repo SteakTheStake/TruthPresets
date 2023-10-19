@@ -36,8 +36,13 @@
         <h1 id="current-weapon-name">Deep Hues</h1>
         <img id="current-weapon-image" src="https://vignette.wikia.nocookie.net/gtawiki/images/5/5e/SMG-GTAVPC-HUD.png/revision/latest/scale-to-width-down/185?cb=20150419121752">
     </div>
-    <button id="weapon-selector-button">Change</button>
+    <div>
+        <div id="clickSound">
+            <button id="weapon-selector-button">Change</button>
+        </div>
+    </div>
 </div>
+<div>
 <div id="weapon-selector-wrapper">
     <div id="weapon-properties">
         <h4>Damage</h4>
@@ -57,7 +62,7 @@
             <div id="range" class="value-bar"></div>
         </div>
     </div>
-    <svg height="620px" width="620px">
+    <svg height="620px" width="620px" id="hoverSound">
         <text text-anchor="middle" id="hovered-weapon-name" x="175" y="400" font-size="18" stroke="none">Select Preset</text>
         <g onclick="changeCurrentWeaponWith(this)"
            onmouseover="mouseoverWeapon(this)"
@@ -172,7 +177,8 @@
         </g>
     </svg>
 </div>
-
+</div>
 </body>
 <script src="/pages/js/circle.js"></script>
+<script src="/pages/js/script.js"></script>
 </html>
