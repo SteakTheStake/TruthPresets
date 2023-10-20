@@ -34,7 +34,7 @@ body {
     mix-blend-mode: screen;
     animation-name: fadeFog;  /* You can chain multiple animations */
     animation-timing-function: linear;  /* Or any other easing function */
-    opacity: 15%;
+    opacity: 5%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -159,15 +159,23 @@ body {
 }
 
 #cloud5 {
-    mix-blend-mode: screen;
-    min-width: 1000px;
-    animation-delay: 5s;
+    left: 0%;
+    animation-delay: 1s;
 }
 
 #cloud6 {
-    mix-blend-mode: screen;
-    min-width: 1000px;
-    animation-delay: 1s;
+    right: 50%;
+    animation-delay: 2s;
+}
+
+#cloud7 {
+    left: 50%;
+    animation-delay: 3s;
+}
+
+#cloud8 {
+    left: 25%;
+    animation-delay: 2s;
 }
 
 header {

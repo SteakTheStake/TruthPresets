@@ -40,13 +40,36 @@
 
 <!-- Background -->
 <div class="z-0">
+    <!--
     <img src="/content/img/cloud1.png" class="cloud" id="cloud1" alt="cloud">
     <img src="/content/img/cloud2.png" class="cloud" id="cloud2" alt="cloud">
     <img src="/content/img/cloud3.png" class="cloud" id="cloud3" alt="cloud">
     <img src="/content/img/cloud1.png" class="cloud" id="cloud4" alt="cloud">
+
+    <img src="/content/img/cloud1.png" class="cloud" id="cloud5" alt="cloud">
+    <img src="/content/img/cloud2.png" class="cloud" id="cloud6" alt="cloud">
+    <img src="/content/img/cloud3.png" class="cloud" id="cloud7" alt="cloud">
+    <img src="/content/img/cloud1.png" class="cloud" id="cloud8" alt="cloud">
+    -->
         <div id="imageToScale">
             <img src="/content/img/GTA-V-height.png" class="fog" alt="background">
-            <img src="/content/img/GTA-V.png" class="background" alt="background">
+            <video class="background" id="background-video" autoplay loop muted poster="/content/img/GTA-V.png">
+                <source src="/content/img/GTA-V.mp4" type="video/mp4">
+            </video>
+            <script>
+                var video = document.getElementById("background-video");
+
+                // Set initial playback speed to 0.5x
+                video.playbackRate = 0.4;
+
+                // Optional: Ensure that the playback speed remains at 0.5x
+                // even if the user interacts with the video's controls
+                video.addEventListener('ratechange', function() {
+                    if (this.playbackRate !== 0.4) {
+                        this.playbackRate = 0.4;
+                    }
+                });
+            </script>
         </div>
 </div>
 </body>
