@@ -35,3 +35,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+if (window.innerWidth <= 800 && window.innerHeight <= 600) {
+    // Likely a mobile device
+    window.location.href = "/pages/mobile_not_supported.html";
+}
+
