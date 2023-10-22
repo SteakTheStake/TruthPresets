@@ -4,10 +4,16 @@ html {
     min-height: 100%;
     height: 100%;
     overflow: hidden;
+    font-smooth: always;
 }
 
 .title {
     font-family: 'Bebas Neue', sans-serif;
+}
+
+.title2 {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: lighter;
 }
 
 body {
@@ -17,6 +23,8 @@ body {
     font-weight: 400;
     overflow: hidden;
     font-family: "Rajdhani", sans-serif;
+    background-color: white;
+    color: black;
 }
 
 .background {
@@ -69,12 +77,12 @@ body {
 }
 
 .z-0 {
-    z-index: 0;
+    z-index: -999;
     overflow: hidden;
 }
 
 .z-10 {
-    z-index: -999;
+    z-index: 10;
 }
 
 .separator-pin {
@@ -184,8 +192,11 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.75);
-    box-shadow: 0 0 20px #0003;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0);
+    --glow-margin: 70px;
+    filter: brightness(1000%) drop-shadow(0 0 75px rgb(255, 0, 0));
+    font-smooth: always;
 }
 header nav {
     position: relative;
@@ -201,11 +212,16 @@ header nav .navigation-menu {
 }
 header nav .navigation-menu li {
     position: relative;
+    --glow-margin: 70px;
+    filter: brightness(1000%) drop-shadow(0 0 75px rgb(255, 0, 0));
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 15px;
 }
 header nav .navigation-menu li a {
     position: relative;
     display: block;
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
     padding: 1rem 2rem;
     text-wrap: none;
@@ -214,6 +230,11 @@ header nav .navigation-menu li a {
 .logo{
     width: 75px;
     height: auto;
+    --glow-margin: 70px;
+    filter: brightness(500%) drop-shadow(0 0 75px rgb(255, 255, 255));
+    background-color: rgba(255, 255, 255, 0);
+    mix-blend-mode: screen;
+    background-blend-mode: screen;
 }
 header nav .navigation-menu li.extends a::after {
     content: ">";
@@ -235,8 +256,10 @@ header nav .navigation-menu li ul {
     flex-direction: column;
     padding: 0;
     list-style: none;
-    background-color: rgba(37, 46, 49, 0.75);
-    box-shadow: 0 0 20px #0003;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0);
+    --glow-margin: 70px;
+    filter: blur(1.5rem) brightness(1000%) drop-shadow(0 0 75px rgb(255, 0, 0));
 }
 header nav .navigation-menu li ul li {
     position: unset;
@@ -248,10 +271,204 @@ header nav .navigation-menu li ul li ul {
     left: 100%;
     top: 0;
     min-height: 100%;
+    mix-blend-mode: overlay;
+    background-blend-mode: overlay;
 }
 header nav .navigation-menu li:hover {
-    background-color: rgba(37, 46, 49, 0.75);
+    background-color: rgba(255, 0, 0, 0.75);
+    mix-blend-mode: screen;
+    background-blend-mode: screen;
+
 }
 header nav .navigation-menu li:not(:hover) ul {
     display: none;
 }
+
+.glowing-background {
+    z-index: 11;
+    text-align: center;
+    opacity: 100%;
+    width: 100%;
+    font-family: 'Bebas Neue', sans-serif;
+    --glow-margin: 70px;
+    filter: brightness(75%) drop-shadow(0 0 75px rgb(255, 255, 255));
+}
+.glowing-background:hover {
+    color: black;
+}
+
+
+/* DARK MODE */
+
+body.dark-mode {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-weight: 400;
+    overflow: hidden;
+    font-family: "Rajdhani", sans-serif;
+    background-color: black;
+    color: white;
+}
+
+header.dark-mode {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0);
+    --glow-margin: 70px;
+    filter: brightness(250%) drop-shadow(0 0 75px rgb(255, 0, 0));
+    font-smooth: always;
+}
+header.dark-mode nav .navigation-menu li a {
+    position: relative;
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    text-wrap: none;
+    font-size: 1.25em;
+    --glow-margin: 70px;
+    filter: brightness(1000%) drop-shadow(0 0 75px rgb(255, 0, 0));
+}
+header.dark-mode nav .navigation-menu li a:hover {
+    position: relative;
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    text-wrap: none;
+    font-size: 1.25em;
+    --glow-margin: 70px;
+    filter: brightness(1000%) drop-shadow(0 0 75px rgb(255, 0, 0));
+}
+header.dark-mode nav .navigation-menu li ul {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    list-style: none;
+    background-color: rgba(37, 46, 49, 0);
+    box-shadow: 0 0 20px #0003;
+    mix-blend-mode: overlay;
+    background-blend-mode: overlay;
+    --glow-margin: 70px;
+    filter: brightness(1000%) drop-shadow(0 0 75px rgb(255, 0, 0));
+}
+header.dark-mode nav .navigation-menu-mode li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    mix-blend-mode: overlay;
+    background-blend-mode: overlay;
+    --glow-margin: 70px;
+    filter: brightness(1000%) drop-shadow(0 0 75px rgb(255, 0, 0));
+}
+header nav .navigation-menu li:not(:hover) ul {
+    display: none;
+}
+
+.glowing-background.dark-mode {
+    z-index: 11;
+    text-align: center;
+    animation: darkTextColor 10s ease infinite;
+    background-blend-mode: screen;
+    opacity: 100%;
+    width: 100%;
+}
+/* END DARK MODE*/
+
+.section1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100px;
+
+}
+.align-center {
+    align-items: center;
+    vertical-align: center;
+    text-align: center;
+    padding: 100px;
+    margin: 50px;
+}
+
+.elias-dingle {
+    padding: 10px;
+}
+
+.mask {
+    border-radius: 77px;
+    width: 350px;
+    height: 350px;
+}
+
+.background-image1 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -999;
+}
+
+.background-image2 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -999;
+}
+
+.background-image3 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -999;
+}
+
+.background-image4 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -999;
+}
+
+.background-image5 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -999;
+}
+
+.background-image6 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -999;
+}
+

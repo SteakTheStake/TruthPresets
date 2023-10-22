@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Truth Presets | Map</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/content/img/favicon.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" href="/pages/css/style.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+<!-- Foreground -->
+<div class="z-10">
+    <header>
+        <nav>
+            <div class="glowing-background">
+                <ul class="navigation-menu">
+                    <li><a href="/pages/home.html" id="toggleLightLogo2"><img class="logo" src="/content/img/tp-logo.png" alt="logo"/></a></li>
+                    <li><a href="/pages/home.html" id="toggleDarkLogo2" style="display: none;"><img class="logo" src="/content/img/tp-logo-darkmode.png" alt="logo"/></a></li>
+                    <li><a href="https://patreon.com/TruthPresets?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=creatorshare_fan&utm_content=join_link" target="_blank">Presets</a></li>
+
+                    <li><a href="/pages/map.html">Screenshots</a></li>
+                    <li><a href="/pages/compare.html">Compare Our Presets</a></li>
+                    <li><a href="https://discord.gg/SYQNtWAzAx" target="_blank">Discord</a></li>
+                    <li><a href="#" id="toggleDark2"><i class="fa-solid fa-moon"></i></a></li>
+                    <li><a href="#" id="toggleLight2" style="display: none;"><i class="fa-solid fa-sun" style="color: #ffffff;"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="separator-pin" id="hoverSound">
+        <div class="pin">
+            <button class="btn" id="clickSound"></button>
+            <i class="fa-solid fa-location-dot fa-2xl" style="color: #c73838;"></i>
+        </div>
+    </div>
+
+</div>
+
+<!-- Background -->
+<div class="z-0">
+        <div id="imageToScale">
+            <img src="/content/img/GTA-V-height.png" class="fog" alt="background">
+            <video class="background" id="background-video2" autoplay loop muted poster="/content/img/GTA-V.png">
+                <source src="/content/img/GTA-V.mp4" type="video/mp4">
+            </video>
+            <script>
+                var video = document.getElementById("background-video2");
+
+                // Set initial playback speed to 0.5x
+                video.playbackRate = 1.25;
+
+                // Optional: Ensure that the playback speed remains at 0.5x
+                // even if the user interacts with the video's controls
+                video.addEventListener('ratechange', function() {
+                    if (this.playbackRate !== 1.25) {
+                        this.playbackRate = 1.25;
+                    }
+                });
+            </script>
+        </div>
+</div>
+</body>
+<script src="/pages/js/script.js"></script>
+<script src="/pages/js/darkmode2.js"></script>
+<script src="/pages/js/phone.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://kit.fontawesome.com/cd4693caa2.js" crossorigin="anonymous"></script>
+</html>

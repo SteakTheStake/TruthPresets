@@ -58,3 +58,7 @@ function changeCurrentWeaponWith(element) {
     currentWeapon.style.filter = "none";
     appInfo.style.filter = "none";
 }
+
+document.getElementById('patreon').onclick = function() {
+    window.open('https://patreon.com/TruthPresets?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=creatorshare_fan&utm_content=join_link', '_blank');
+};

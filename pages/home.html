@@ -10,63 +10,54 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-<header>
-    <nav>
-        <ul class="navigation-menu">
-            <li><a href="/pages/home.html"><img class="logo" src="/content/img/tp-logo.png" alt="logo"/></a></li>
-            <li class="extends"><a href="#">Presets</a>
-                <ul>
-                    <li><a href="https://patreon.com/TruthPresets?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=creatorshare_fan&utm_content=join_link" target="_blank">Download</a></li>
-                </ul>
-            </li>
-
-            <li><a href="#">Screenshots</a></li>
-            <li><a href="/pages/compare.html">Compare Our Presets</a></li>
-            <li><a href="https://discord.gg/SYQNtWAzAx" target="_blank">Discord</a></li>
-        </ul>
-    </nav>
-</header>
 
 <!-- Foreground -->
 <div class="z-10">
-    <div class="separator-pin" id="hoverSound">
-        <div class="pin">
-            <button class="btn" id="clickSound"></button>
-            <i class="fa-solid fa-location-dot fa-2xl" style="color: #c73838;"></i>
+<header>
+    <nav>
+        <div class="glowing-background">
+        <ul class="navigation-menu" id="hoverSound">
+            <li><a href="/pages/home.html" id="toggleLightLogo"><img class="logo" src="/content/img/tp-logo.png" alt="logo"/></a></li>
+            <li><a href="/pages/home.html" id="toggleDarkLogo" style="display: none;"><img class="logo" src="/content/img/tp-logo-darkmode.png" alt="logo"/></a></li>
+            <li><a href="https://patreon.com/TruthPresets?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=creatorshare_fan&utm_content=join_link" target="_blank">Presets</a></li>
+
+            <li><a href="/pages/map.html">Screenshots</a></li>
+            <li><a href="/pages/compare.html">Compare Our Presets</a></li>
+            <li><a href="https://discord.gg/SYQNtWAzAx" target="_blank">Discord</a></li>
+            <div id="clickSound">
+            <li><a href="#" id="toggleDark"><i class="fa-solid fa-moon"></i></a></li>
+            <li><a href="#" id="toggleLight" style="display: none;"><i class="fa-solid fa-sun" style="color: #ffffff;"></i></a></li>
+            </div>
+        </ul>
         </div>
-    </div>
-    <!-- Add more cloud images as needed -->
+    </nav>
+</header>
 </div>
 
 <!-- Background -->
 <div class="z-0">
-    <!--
-    <img src="/content/img/cloud1.png" class="cloud" id="cloud1" alt="cloud">
-    <img src="/content/img/cloud2.png" class="cloud" id="cloud2" alt="cloud">
-    <img src="/content/img/cloud3.png" class="cloud" id="cloud3" alt="cloud">
-    <img src="/content/img/cloud1.png" class="cloud" id="cloud4" alt="cloud">
 
-    <img src="/content/img/cloud1.png" class="cloud" id="cloud5" alt="cloud">
-    <img src="/content/img/cloud2.png" class="cloud" id="cloud6" alt="cloud">
-    <img src="/content/img/cloud3.png" class="cloud" id="cloud7" alt="cloud">
-    <img src="/content/img/cloud1.png" class="cloud" id="cloud8" alt="cloud">
-    -->
+    <div class="section1">
+        <div class="align-center">
+            <h1 class="title2">WELCOME TO TRUTH PRESETS</h1>
+        </div>
+    </div>
+
         <div id="imageToScale">
-            <img src="/content/img/GTA-V-height.png" class="fog" alt="background">
-            <video class="background" id="background-video" autoplay loop muted poster="/content/img/GTA-V.png">
-                <source src="/content/img/GTA-V.mp4" type="video/mp4">
+            <video class="background" id="background-video" autoplay loop muted>
+                <source src="/content/video/Truth_Presets_Website_DayTime.mp4" type="video/mp4">
             </video>
             <script>
                 var video = document.getElementById("background-video");
 
                 // Set initial playback speed to 0.5x
-                video.playbackRate = 0.4;
+                video.playbackRate = 1;
 
                 // Optional: Ensure that the playback speed remains at 0.5x
                 // even if the user interacts with the video's controls
                 video.addEventListener('ratechange', function() {
-                    if (this.playbackRate !== 0.4) {
-                        this.playbackRate = 0.4;
+                    if (this.playbackRate !== 1) {
+                        this.playbackRate = 1;
                     }
                 });
             </script>
@@ -74,6 +65,7 @@
 </div>
 </body>
 <script src="/pages/js/script.js"></script>
+<script src="/pages/js/darkmode.js"></script>
 <script src="/pages/js/phone.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://kit.fontawesome.com/cd4693caa2.js" crossorigin="anonymous"></script>
