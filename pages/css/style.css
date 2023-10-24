@@ -85,7 +85,7 @@ body {
     z-index: 10;
 }
 
-.separator-pin {
+.separator-pin1 {
     scale: 200%;
     position: absolute;
     top: 63%;
@@ -93,25 +93,169 @@ body {
     transform: translate(-50%, -50%);
     opacity: 75%;
     display: flex;
+    cursor: pointer;
 }
 
-.separator-pin .btn {
+.separator-pin1 .btn1 {
     width: 50px;
     height: 50px;
     position: absolute;
     visibility: visible;
     bottom: -10px;
-    border: rgba(0,0,0,0);
+    transform: translate(-50%, -50%);
     background-color: rgba(255,255,255,0);
+    border: none;
+    border-radius: 35px;
 }
 
-.separator-pin .pin {
+.separator-pin1 .pin1 {
     transform-origin: bottom;
     position: absolute;
     transition: transform 250ms;
 }
 
-.separator-pin .pin:hover {
+.separator-pin1 .pin1:hover {
+    transform: scale(90%);
+    transform-origin: bottom;
+}
+
+
+
+.separator-pin2 {
+    scale: 200%;
+    position: absolute;
+    top: 45%;
+    left: 56%;
+    transform: translate(-40%, -85%);
+    opacity: 75%;
+    display: flex;
+    cursor: pointer;
+}
+
+.separator-pin2 .btn2 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    visibility: visible;
+    bottom: -10px;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255,255,255,0);
+    border: none;
+    border-radius: 35px;
+}
+
+.separator-pin2 .pin2 {
+    transform-origin: bottom;
+    position: absolute;
+    transition: transform 250ms;
+}
+
+.separator-pin2 .pin2:hover {
+    transform: scale(90%);
+    transform-origin: bottom;
+}
+
+
+
+.separator-pin3 {
+    scale: 200%;
+    position: absolute;
+    top: 41%;
+    left: 49%;
+    transform: translate(-40%, -55%);
+    opacity: 75%;
+    display: flex;
+    cursor: pointer;
+}
+
+.separator-pin3 .btn3 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    visibility: visible;
+    bottom: -10px;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255,255,255,0);
+    border: none;
+    border-radius: 35px;
+}
+
+.separator-pin3 .pin3 {
+    transform-origin: bottom;
+    position: absolute;
+    transition: transform 250ms;
+}
+
+.separator-pin3 .pin3:hover {
+    transform: scale(90%);
+    transform-origin: bottom;
+}
+
+
+
+.separator-pin4 {
+    scale: 200%;
+    position: absolute;
+    top: 66%;
+    left: 41%;
+    transform: translate(-40%, -55%);
+    opacity: 75%;
+    display: flex;
+    cursor: pointer;
+}
+
+.separator-pin4 .btn4 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    visibility: visible;
+    bottom: -10px;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255,255,255,0);
+    border: none;
+    border-radius: 35px;
+}
+
+.separator-pin4 .pin4 {
+    transform-origin: bottom;
+    position: absolute;
+    transition: transform 250ms;
+}
+
+.separator-pin4 .pin4:hover {
+    transform: scale(90%);
+    transform-origin: bottom;
+}
+
+
+.separator-pin5 {
+    scale: 200%;
+    position: absolute;
+    top: 73%;
+    left: 53%;
+    transform: translate(-40%, -55%);
+    opacity: 75%;
+    display: flex;
+}
+
+.separator-pin5 .btn5 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    visibility: visible;
+    bottom: -10px;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 35px;
+}
+
+.separator-pin5 .pin5 {
+    transform-origin: bottom;
+    position: absolute;
+    transition: transform 250ms;
+}
+
+.separator-pin5 .pin5:hover {
     transform: scale(90%);
     transform-origin: bottom;
 }
@@ -472,9 +616,57 @@ header nav .navigation-menu li:not(:hover) ul {
     z-index: -999;
 }
 
-/* Hide the entire webpage for screens with a max width of 768px (typically mobile devices) */
-@media only screen and (max-width: 768px) {
-    body {
-        display: none;
-    }
+.group-pop {
+    width: 100%;
+    height: auto;
+}
+
+.popup1 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    z-index: 999;
+}
+
+.popup-content1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: none;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 35px;
+    max-width: 62vw;
+    max-height: 62vh;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.popup-content-img {
+    object-fit: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 35px;
+    width: 60vw;
+    height: 60vh;
+    margin: 0 auto;
+}
+
+.close-button1 {
+    position: fixed;
+    top: 5px;
+    right: 10px;
+    font-size: 50px;
+    cursor: pointer;
+    color: red;
+    z-index: 1000;
 }
