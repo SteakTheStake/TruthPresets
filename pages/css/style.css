@@ -88,8 +88,8 @@ body {
 .separator-pin1 {
     scale: 200%;
     position: absolute;
-    top: 63%;
-    left: 46%;
+    top: 72%;
+    left: 46.5%;
     transform: translate(-50%, -50%);
     opacity: 75%;
     display: flex;
@@ -124,8 +124,8 @@ body {
 .separator-pin2 {
     scale: 200%;
     position: absolute;
-    top: 45%;
-    left: 56%;
+    top: 61%;
+    left: 47%;
     transform: translate(-40%, -85%);
     opacity: 75%;
     display: flex;
@@ -160,7 +160,7 @@ body {
 .separator-pin3 {
     scale: 200%;
     position: absolute;
-    top: 41%;
+    top: 53%;
     left: 49%;
     transform: translate(-40%, -55%);
     opacity: 75%;
@@ -196,7 +196,7 @@ body {
 .separator-pin4 {
     scale: 200%;
     position: absolute;
-    top: 66%;
+    top: 60%;
     left: 41%;
     transform: translate(-40%, -55%);
     opacity: 75%;
@@ -231,8 +231,8 @@ body {
 .separator-pin5 {
     scale: 200%;
     position: absolute;
-    top: 73%;
-    left: 53%;
+    top: 76%;
+    left: 48%;
     transform: translate(-40%, -55%);
     opacity: 75%;
     display: flex;
