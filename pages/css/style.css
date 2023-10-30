@@ -648,6 +648,48 @@ section .z-0 div .section1.dark-mode {
 }
 
 .align-center {
+    position: absolute;
+    padding: 40px;
+    align-items: center;
+    vertical-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: none;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 35px;
+    max-width: 62vw;
+    max-height: 62vh;
+    margin: 535vh auto 0;
+    object-fit: contain;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.column {
+    float: right;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.patreon-1 {
+    padding: 5px;
+    cursor: pointer;
+}
+.copyright-2 {
+    padding: 5px;
+}
+
+.discord-3 {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.footer {
 
 }
 
