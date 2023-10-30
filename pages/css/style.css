@@ -554,7 +554,7 @@ section .z-0 div .section1.dark-mode {
     overflow: hidden;
     margin: auto;
     position: absolute;
-    filter: contrast(55%) saturate(90%) sepia(20%);
+    filter: contrast(55%) saturate(90%) sepia(100%);
     background-size: 1000% 1000%;
     animation: gradientAnimation 25s infinite;
     background-image: radial-gradient(#ff2c00, #ffc300, #770000);
