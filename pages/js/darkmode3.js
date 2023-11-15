@@ -1,8 +1,8 @@
-const toggleDarkButton = document.getElementById('toggleDark3');
-const toggleLightButton = document.getElementById('toggleLight3');
+const toggleDarkButton3 = document.getElementById('toggleDark3');
+const toggleLightButton3 = document.getElementById('toggleLight3');
 
-const toggleDarkLogo = document.getElementById('toggleDarkLogo3');
-const toggleLightLogo = document.getElementById('toggleLightLogo3');
+const toggleDarkLogo3 = document.getElementById('toggleDarkLogo3');
+const toggleLightLogo3 = document.getElementById('toggleLightLogo3');
 
 const currentTheme = localStorage.getItem('theme');
 const headerElement = document.querySelector('header');
@@ -37,16 +37,16 @@ function setImage6() {
 
 function toggleThemeUI(theme) {
     if (theme === 'dark-mode') {
-        toggleDarkButton.style.display = 'none';
-        toggleLightButton.style.display = 'block';
-        toggleDarkLogo.style.display = 'none';
-        toggleLightLogo.style.display = 'block';
+        toggleDarkButton3.style.display = 'none';
+        toggleLightButton3.style.display = 'block';
+        toggleDarkLogo3.style.display = 'none';
+        toggleLightLogo3.style.display = 'block';
         headerElement.classList.add('dark-mode');
     } else {
-        toggleDarkButton.style.display = 'block';
-        toggleLightButton.style.display = 'none';
-        toggleDarkLogo.style.display = 'block';
-        toggleLightLogo.style.display = 'none';
+        toggleDarkButton3.style.display = 'block';
+        toggleLightButton3.style.display = 'none';
+        toggleDarkLogo3.style.display = 'block';
+        toggleLightLogo3.style.display = 'none';
         headerElement.classList.remove('dark-mode');
     }
 }
@@ -58,13 +58,13 @@ if (currentTheme) {
     setVideoSource(currentTheme);
 }
 
-toggleDarkButton.addEventListener('click', function() {
+toggleDarkButton3.addEventListener('click', function() {
     document.body.classList.add('dark-mode');
     localStorage.setItem('theme', 'dark-mode');
     setVideoSource('dark-mode');
 });
 
-toggleLightButton.addEventListener('click', function() {
+toggleLightButton3.addEventListener('click', function() {
     document.body.classList.remove('dark-mode');
     localStorage.setItem('theme', 'light-mode');
     setVideoSource('light-mode');

@@ -28,7 +28,7 @@ body {
     height: 100%;
     font-weight: 400;
     font-family: "Rajdhani", sans-serif;
-    color: black;
+    color: #ffffff;
 }
 
 .background {
@@ -369,7 +369,7 @@ header nav .navigation-menu li {
 header nav .navigation-menu li a {
     position: relative;
     display: block;
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
     padding: 1rem 2rem;
     text-wrap: none;
@@ -379,7 +379,7 @@ header nav .navigation-menu li a {
     width: 80px;
     height: auto;
     font-smooth: always;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 15px;
 }
 header nav .navigation-menu li.extends a::after {
@@ -439,7 +439,7 @@ header nav .navigation-menu li:not(:hover) ul {
     filter: brightness(200%) drop-shadow(0 0 75px rgb(255, 87, 51));
 }
 .glowing-background:hover {
-    color: black;
+    color: #000000;
 }
 
 
@@ -451,7 +451,7 @@ body.dark-mode {
     height: 100%;
     font-weight: 400;
     font-family: "Rajdhani", sans-serif;
-    color: #000000;
+    color: #ffffff;
 }
 
 header.dark-mode {
@@ -469,7 +469,7 @@ header.dark-mode {
 header.dark-mode nav .navigation-menu li a {
     position: relative;
     display: block;
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
     padding: 1rem 2rem;
     text-wrap: none;
@@ -479,7 +479,7 @@ header.dark-mode nav .navigation-menu li a {
 header.dark-mode nav .navigation-menu li a:hover {
     position: relative;
     display: block;
-    color: black;
+    color: #000000;
     text-decoration: none;
     padding: 1rem 2rem;
     text-wrap: none;
