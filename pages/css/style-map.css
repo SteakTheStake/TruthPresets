@@ -263,6 +263,171 @@ body {
     transform-origin: bottom;
 }
 
+
+.separator-pin6 {
+    scale: 200%;
+    position: absolute;
+    top: 35%;
+    left: 75%;
+    transform: translate(-40%, -55%);
+    opacity: 75%;
+    display: flex;
+}
+
+.separator-pin6 .btn6 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    visibility: visible;
+    bottom: -10px;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 35px;
+}
+
+.separator-pin6 .pin6 {
+    transform-origin: bottom;
+    position: absolute;
+    transition: transform 250ms;
+}
+
+.separator-pin6 .pin6:hover {
+    transform: scale(90%);
+    transform-origin: bottom;
+}
+
+
+.separator-pin7 {
+    scale: 200%;
+    position: absolute;
+    top: 47%;
+    left: 75%;
+    transform: translate(-40%, -55%);
+    opacity: 75%;
+    display: flex;
+}
+
+.separator-pin7 .btn7 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    visibility: visible;
+    bottom: -10px;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 35px;
+}
+
+.separator-pin7 .pin7 {
+    transform-origin: bottom;
+    position: absolute;
+    transition: transform 250ms;
+}
+
+.separator-pin7 .pin7:hover {
+    transform: scale(90%);
+    transform-origin: bottom;
+}
+
+
+.separator-pin8 {
+    scale: 200%;
+    position: absolute;
+    top: 59%;
+    left: 75%;
+    transform: translate(-40%, -55%);
+    opacity: 75%;
+    display: flex;
+}
+
+.separator-pin8 .btn8 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    visibility: visible;
+    bottom: -10px;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 35px;
+}
+
+.separator-pin8 .pin8 {
+    transform-origin: bottom;
+    position: absolute;
+    transition: transform 250ms;
+}
+
+.separator-pin8 .pin8:hover {
+    transform: scale(90%);
+    transform-origin: bottom;
+}
+
+
+.separator-pin9 {
+    scale: 200%;
+    position: absolute;
+    top: 73%;
+    left: 75%;
+    transform: translate(-40%, -55%);
+    opacity: 75%;
+    display: flex;
+}
+
+.separator-pin9 .btn9 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    visibility: visible;
+    bottom: -10px;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 35px;
+}
+
+.separator-pin9 .pin9 {
+    transform-origin: bottom;
+    position: absolute;
+    transition: transform 250ms;
+}
+
+.separator-pi95 .pin9:hover {
+    transform: scale(90%);
+    transform-origin: bottom;
+}
+
+
+.separator-pin10 {
+    scale: 200%;
+    position: absolute;
+    top: 85%;
+    left: 75%;
+    transform: translate(-40%, -55%);
+    opacity: 75%;
+    display: flex;
+}
+
+.separator-pin10 .btn10 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    visibility: visible;
+    bottom: -10px;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 35px;
+}
+
+.separator-pin10 .pin10 {
+    transform-origin: bottom;
+    position: absolute;
+    transition: transform 250ms;
+}
+
+.separator-pin10 .pin10:hover {
+    transform: scale(90%);
+    transform-origin: bottom;
+}
+
 .container {
     position: relative;
     width: 100%;
