@@ -267,9 +267,9 @@ body {
 .separator-pin6 {
     scale: 200%;
     position: absolute;
-    top: 35%;
-    left: 75%;
-    transform: translate(-40%, -55%);
+    top: 62%;
+    left: 49%;
+    transform: translate(-40%, -85%);
     opacity: 75%;
     display: flex;
 }
@@ -300,8 +300,8 @@ body {
 .separator-pin7 {
     scale: 200%;
     position: absolute;
-    top: 47%;
-    left: 75%;
+    top: 56%;
+    left: 35.5%;
     transform: translate(-40%, -55%);
     opacity: 75%;
     display: flex;
@@ -333,9 +333,9 @@ body {
 .separator-pin8 {
     scale: 200%;
     position: absolute;
-    top: 59%;
-    left: 75%;
-    transform: translate(-40%, -55%);
+    top: 66%;
+    left: 47%;
+    transform: translate(-50%, -50%);
     opacity: 75%;
     display: flex;
 }
@@ -366,9 +366,9 @@ body {
 .separator-pin9 {
     scale: 200%;
     position: absolute;
-    top: 73%;
-    left: 75%;
-    transform: translate(-40%, -55%);
+    top: 34.5%;
+    left: 54%;
+    transform: translate(-50%, -50%);
     opacity: 75%;
     display: flex;
 }
@@ -399,9 +399,9 @@ body {
 .separator-pin10 {
     scale: 200%;
     position: absolute;
-    top: 85%;
-    left: 75%;
-    transform: translate(-40%, -55%);
+    top: 69%;
+    left: 49%;
+    transform: translate(-50%, -50%);
     opacity: 75%;
     display: flex;
 }
